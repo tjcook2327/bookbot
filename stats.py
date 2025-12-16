@@ -17,3 +17,21 @@ def char_num_times(book_obj):
         else:
             char_list[char] = 1
     return char_list
+
+def sort_on(items):
+    return items
+
+def sort_list(char_dict):
+    char_list = []
+    char_sorted_dict = {}
+    for key, value in char_dict.items():
+        char_list.append((value, key))
+        char_list.sort(reverse=True, key=sort_on)
+    for key2, value2 in char_list:
+        if value2.isalpha() == True:
+            char_sorted_dict.update({value2 : key2}) 
+    return char_sorted_dict
+
+        
+
+
